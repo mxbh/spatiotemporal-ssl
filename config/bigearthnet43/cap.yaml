@@ -1,0 +1,56 @@
+algorithm: cap
+save_dir: ./runs/debug
+save_name: cap
+resume: False #True
+load_path: null #./saved_models/classic_cv/fixmatch_cifar10_40_0/latest_model.pth
+overwrite: True
+use_tensorboard: False
+use_wandb: True
+epoch: 1
+num_train_iter: 64000
+num_eval_iter: 2000
+patience_iters: 16000
+num_log_iter: 100
+num_labels: 100
+batch_size: 64
+eval_batch_size: 512
+pseudolabel_from_ema: True
+ema_t: 0.999
+pos_per: 1.0 # 0.8
+neg_per: 1.0
+use_asl: True
+gamma_neg: 4
+gamma_pos: 1
+clip: 0.05
+eps: 1e-8
+disable_torch_grad_focal_loss: True
+ulb_loss_ratio: 1.0
+uratio: 7
+ema_m: 0.999
+crop_ratio: 0.875
+img_size: 128
+optim: AdamW
+lr: 1e-4
+momentum: 0.9
+weight_decay: 0.0005
+layer_decay: 1.0
+amp: False
+use_cat: True
+net: vit_small_patch16_128 # wrn_28_2
+net_from_name: False
+data_dir: ./data
+pt_data_dir: bigearthnet_rgb_pt_f16
+dataset: bigearthnet
+train_sampler: RandomSampler
+num_classes: 43
+multilabel: True
+num_workers: 8
+seed: 0
+world_size: 1
+rank: 0
+multiprocessing_distributed: False
+dist_url: tcp://127.0.0.1:10008
+dist_backend: nccl
+gpu: 0
+use_pretrain: True
+pretrain_path: https://github.com/microsoft/Semi-supervised-learning/releases/download/v.0.0.0/vit_small_patch16_224_mlp_im_1k_224.pth
