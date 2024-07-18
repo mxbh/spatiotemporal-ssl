@@ -15,7 +15,7 @@ This is the official code repository for the paper "Context Matters: Leveraging 
 }
 ```
 ## Supplementary Material
-TODO
+[supplementary.pdf](https://github.com/mxbh/spatiotemporal-ssl/releases/download/supplementary/supplementary.pdf)
 
 ## Installation
 This repository is based on [USB](https://github.com/microsoft/Semi-supervised-learning). USB is built on pytorch, with torchvision, torchaudio, and transformers.
@@ -60,8 +60,8 @@ The `./data` folder should be structured as follows:
           ...
     eurosat_meta.yaml
 ```
-The split files for BigEarthNet can be accessed TODO.
-We adopt the train-val-test for BigEarthNet from [here](split from https://github.com/ServiceNow/seasonal-contrast/blob/8285173ec205b64bc3e53b880344dd6c3f79fa7a/datasets/bigearthnet_dataset.py#L119) and exclude patches with cloud, shadow, and seasonal snow.
+The split files for BigEarthNet can be accessed [here](https://github.com/mxbh/spatiotemporal-ssl/releases/tag/data).
+We adopt the train-val-test for BigEarthNet from [Seasonal Contrast](https://github.com/ServiceNow/seasonal-contrast/blob/8285173ec205b64bc3e53b880344dd6c3f79fa7a/datasets/bigearthnet_dataset.py#L119) and exclude patches with cloud, shadow, and seasonal snow.
 
 ## Training
 To train a model, e.g., FixMatch, run
